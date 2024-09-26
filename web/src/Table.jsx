@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import DataTable from "react-data-table-component";
 import axios from 'axios';
-import AppBar from "./Appbar";
 
 function App() {
     const [records, setRecords] = useState([]);
     const [filteredRecords, setFilteredRecords] = useState([]);
-    const [filterValue, setFilterValue] = useState(''); // Store the search input value
-    const token = localStorage.getItem('token'); // Get token from local storage
+    const [filterValue, setFilterValue] = useState(''); 
+    const token = localStorage.getItem('token'); 
 
-    const columns = [ //react-data-table-component
+    const columns = [
         {
             name: 'Company Name',
             selector: row => row.companyName,
@@ -25,7 +24,7 @@ function App() {
             cell: row => (
                 <input
                     type="checkbox"
-                    checked={row.checked || false} // Initialize with server data
+                    checked={row.checked || false}
                     onChange={() => handleCheckToggle(row.id, !row.checked)}
                 />
             ),
@@ -36,8 +35,9 @@ function App() {
             cell: row => (
                 <input
                     type="text"
-                    value={row.note || ''} // Initialize with server data
+                    value={row.note || ''}
                     onChange={(e) => handleNoteChange(row.id, e.target.value)}
+                    style={styles.noteInput}
                 />
             ),
             sortable: false
@@ -45,7 +45,6 @@ function App() {
     ];
 
     useEffect(() => {
-        // Fetch data from the Express server with token in headers
         axios.get('http://localhost:3000/data', {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -53,14 +52,14 @@ function App() {
         })
         .then(response => {
             setRecords(response.data);
-            setFilteredRecords(response.data); // Initialize filtered records
+            setFilteredRecords(response.data);
         })
         .catch(error => console.error('Error fetching data:', error));
     }, [token]);
 
     function handleFilter(event) {
         const value = event.target.value.toLowerCase();
-        setFilterValue(value); // Update the filter value state
+        setFilterValue(value);
         const newFilteredData = records.filter(row => 
             row.companyName.toLowerCase().includes(value)
         );
@@ -104,28 +103,135 @@ function App() {
     }
 
     return (
-        <div className='container mt-5' style={{
-            backgroundColor: "white",
-            margin: 20,
-            padding:10,
-            minHeight: 100
-        }}>
-            <div className="text-end">
-                <input 
-                    type="text"
-                    placeholder="Search by company name..."
-                    onChange={handleFilter}
-                    value={filterValue} // Bind the search input to state
+        <div style={styles.appContainer}>
+            <div className='container' style={styles.container}>
+                <div className="text-end" style={styles.searchContainer}>
+                    <input 
+                        type="text"
+                        placeholder="Search by company name..."
+                        onChange={handleFilter}
+                        value={filterValue}
+                        style={styles.searchInput}
+                    />
+                </div>
+                <DataTable
+                    columns={columns}
+                    data={filteredRecords}
+                    fixedHeader
+                    pagination
+                    customStyles={tableStyles}
+                    style={{ width: '100%', marginBottom: '20px' }} 
                 />
             </div>
-            <DataTable
-                columns={columns}
-                data={filteredRecords}
-                fixedHeader
-                pagination
-            />
+            <footer style={styles.footer}>
+                <p style={styles.footerText}>made by 2004</p>
+            </footer>
         </div>
     );
 }
+
+const styles = {
+    appContainer: {
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between' 
+    },
+    container: {
+        backgroundColor: "#ffffff", 
+        padding: "20px 40px",
+        margin: "20px auto",
+        borderRadius: "12px",
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+        maxWidth: "900px",
+        flex: 1, 
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        width: '100%', 
+    },
+    searchContainer: {
+        marginBottom: "20px"
+    },
+    searchInput: {
+        width: "100%", 
+        maxWidth: "300px", 
+        padding: "10px",
+        border: "1px solid #ccc",
+        borderRadius: "8px",
+        fontSize: "16px"
+    },
+    noteInput: {
+        width: '100%',
+        padding: '5px',
+        border: '1px solid #ddd',
+        borderRadius: '4px'
+    },
+    footer: {
+        padding: '10px 0',
+        textAlign: 'center',
+        backgroundColor: 'rgb(144, 236, 253)',
+        color: '#ffffff', 
+        borderRadius: '12px 12px 0 0', 
+    },
+    footerText: {
+        margin: 0,
+    }
+};
+
+const tableStyles = {
+    header: {
+        style: {
+            backgroundColor: 'rgb(144, 236, 253)', 
+            color: '#fff',
+            fontSize: '18px',
+            fontWeight: 'bold',
+            padding: '12px 20px'
+        },
+    },
+    headRow: {
+        style: {
+            backgroundColor: '#1976D2',
+            borderBottomWidth: '1px',
+            borderBottomColor: 'rgb(144, 236, 253)', 
+            borderBottomStyle: 'solid',
+        },
+    },
+    headCells: {
+        style: {
+            color: '#ffffff',
+            fontWeight: 'bold',
+            fontSize: '16px'
+        },
+    },
+    rows: {
+        style: {
+            backgroundColor: '#ffffff',
+            fontSize: '14px',
+            minHeight: '50px', 
+            borderBottom: '1px solid rgb(144, 236, 253)', 
+        }
+    },
+    pagination: {
+        style: {
+            borderTop: '1px solid #ddd',
+            paddingTop: '10px',
+            backgroundColor: '#f8f9fa'
+        }
+    }
+};
+
+
+const globalStyles = {
+    body: {
+        backgroundColor: 'rgb(144, 236, 253)', 
+        margin: 0,
+        color: '#ffffff' 
+    }
+};
+
+document.body.style.backgroundColor = globalStyles.body.backgroundColor;
+document.body.style.margin = globalStyles.body.margin;
+document.body.style.color = globalStyles.body.color;
 
 export default App;
