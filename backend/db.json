@@ -24,7 +24,7 @@
     {
       "id": 4,
       "companyName": "Google",
-      "link": "https://www.google.com/about/careers/applications/jobs/results#!t=jo&jid=127025001&",
+      "link": "https://careers.google.com/jobs/results/",
       "checked": false,
       "note": ""
     },
@@ -37,99 +37,267 @@
     },
     {
       "id": 6,
-      "companyName": "Techmahind",
-      "link": "https://www.techmahindra.com/careers/",
+      "companyName": "Tech Mahindra",
+      "link": "https://careers.techmahindra.com/",
       "checked": false,
       "note": ""
     },
     {
       "id": 7,
       "companyName": "Adobe",
-      "link": "https://www.adobe.com/careers.html",
+      "link": "https://adobe.wd5.myworkdayjobs.com/en-US/external_experienced",
       "checked": false,
       "note": ""
     },
     {
       "id": 8,
-      "companyName": "Microsoft",
-      "link": "https://careers.microsoft.com/v2/global/en/home.html",
-      "checked": false,
-      "note": ""
-    },
-    {
-      "id": 9,
       "companyName": "Paytm",
       "link": "https://paytm.com/fse",
       "checked": false,
       "note": ""
     },
     {
-      "id": 10,
+      "id": 9,
       "companyName": "Walmart",
       "link": "https://careers.walmart.com//",
       "checked": false,
       "note": ""
     },
     {
+      "id": 10,
+      "companyName": "Oyo",
+      "link": "https://www.oyorooms.com/careers/",
+      "checked": false,
+      "note": ""
+    },
+    {
       "id": 11,
-      "companyName": "Amazon",
-      "link": "https://www.amazon.jobs/en/",
+      "companyName": "Uber",
+      "link": "https://www.uber.com/us/en/careers/",
       "checked": false,
       "note": ""
     },
     {
       "id": 12,
-      "companyName": "Microsoft",
-      "link": "https://careers.microsoft.com/v2/global/en/home.html",
+      "companyName": "Goldman Sachs",
+      "link": "https://www.goldmansachs.com/careers/",
       "checked": false,
       "note": ""
     },
     {
       "id": 13,
-      "companyName": "Google",
-      "link": "https://www.google.com/about/careers/applications/jobs/results#!t=jo&jid=127025001&",
+      "companyName": "Flipkart",
+      "link": "https://www.flipkartcareers.com/",
       "checked": false,
       "note": ""
     },
     {
       "id": 14,
-      "companyName": "IBM",
-      "link": "https://www.ibm.com/in-en/careers/search",
+      "companyName": "Myntra",
+      "link": "https://www.myntra.com/careers",
       "checked": false,
       "note": ""
     },
     {
       "id": 15,
-      "companyName": "Techmahind",
-      "link": "https://www.techmahindra.com/careers/",
+      "companyName": "Dell",
+      "link": "https://jobs.dell.com/",
       "checked": false,
       "note": ""
     },
     {
       "id": 16,
-      "companyName": "Adobe",
-      "link": "https://www.adobe.com/careers.html",
+      "companyName": "Accenture",
+      "link": "https://www.accenture.com/in-en/careers",
       "checked": false,
       "note": ""
     },
     {
       "id": 17,
-      "companyName": "Microsoft",
-      "link": "https://careers.microsoft.com/v2/global/en/home.html",
+      "companyName": "Atlassian",
+      "link": "https://www.atlassian.com/company/careers",
       "checked": false,
       "note": ""
     },
     {
       "id": 18,
-      "companyName": "Paytm",
-      "link": "https://paytm.com/fse",
+      "companyName": "Samsung",
+      "link": "https://www.samsung.com/in/aboutsamsung/careers/",
       "checked": false,
       "note": ""
     },
     {
       "id": 19,
-      "companyName": "Azam",
-      "link": "https://careers.walmart.com//",
+      "companyName": "De Shaw",
+      "link": "https://www.deshawgroup.com/careers/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 20,
+      "companyName": "Oracle",
+      "link": "https://www.oracle.com/corporate/careers/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 21,
+      "companyName": "Sony",
+      "link": "https://www.sony.com/electronics/careers",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 22,
+      "companyName": "TCS",
+      "link": "https://www.tcs.com/careers",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 23,
+      "companyName": "Infosys",
+      "link": "https://www.infosys.com/careers/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 24,
+      "companyName": "Arcesium",
+      "link": "https://www.arcesium.com/careers/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 25,
+      "companyName": "Tata Steel",
+      "link": "https://www.tatasteel.com/careers/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 26,
+      "companyName": "Philips",
+      "link": "https://www.careers.philips.com/global/en",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 27,
+      "companyName": "Airbus",
+      "link": "https://www.airbus.com/en/careers",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 28,
+      "companyName": "HP",
+      "link": "https://jobs.hp.com/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 29,
+      "companyName": "PayPal",
+      "link": "https://www.paypal.com/us/webapps/mpp/jobs",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 30,
+      "companyName": "Meesho",
+      "link": "https://meesho.com/careers",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 31,
+      "companyName": "Blackberry",
+      "link": "https://www.blackberry.com/us/en/company/careers",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 32,
+      "companyName": "EY",
+      "link": "https://www.ey.com/en_in/careers",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 33,
+      "companyName": "Headout",
+      "link": "https://www.headout.com/careers/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 34,
+      "companyName": "Sprinkle",
+      "link": "https://www.sprinkle.com/careers",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 35,
+      "companyName": "JP Morgan",
+      "link": "https://careers.jpmorgan.com/us/en/home",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 36,
+      "companyName": "Park+",
+      "link": "https://parkplus.io/careers/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 37,
+      "companyName": "Zomato",
+      "link": "https://www.zomato.com/careers",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 38,
+      "companyName": "Swiggy",
+      "link": "https://careers.swiggy.com/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 39,
+      "companyName": "Optum",
+      "link": "https://careers.optum.com/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 40,
+      "companyName": "Urban Company",
+      "link": "https://www.urbancompany.com/careers",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 41,
+      "companyName": "Cisco",
+      "link": "https://jobs.cisco.com/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 42,
+      "companyName": "Big Basket",
+      "link": "https://bigbasket.jobs/",
+      "checked": false,
+      "note": ""
+    },
+    {
+      "id": 43,
+      "companyName": "MAQ Software",
+      "link": "https://www.maqsoftware.com/careers/",
       "checked": false,
       "note": ""
     }
